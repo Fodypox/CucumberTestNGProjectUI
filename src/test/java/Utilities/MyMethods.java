@@ -37,4 +37,12 @@ public class MyMethods {
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().contains(value));
     }
+
+    public void waitMethod(int second){
+        try {
+            Thread.sleep(second*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
