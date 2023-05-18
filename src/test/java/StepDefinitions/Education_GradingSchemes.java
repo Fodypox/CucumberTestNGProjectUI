@@ -128,6 +128,7 @@ public class Education_GradingSchemes {
 
     @Then("User should see the success message for deleting created grading Scheme")
     public void userShouldSeeTheSuccessMessageForDeletingCreatedGradingScheme() {
+        np.waitUntilVisible(np.getSuccessMessage());
         Assert.assertTrue(np.getSuccessMessage().isDisplayed());
     }
 }
