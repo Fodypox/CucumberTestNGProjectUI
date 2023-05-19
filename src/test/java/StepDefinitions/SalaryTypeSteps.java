@@ -24,6 +24,7 @@ public class SalaryTypeSteps {
     }
 
 
+
     @When("I add new Salary Type")
     public void iAddNewSalaryType() {
         st.clickMethod(st.getPlusButton());

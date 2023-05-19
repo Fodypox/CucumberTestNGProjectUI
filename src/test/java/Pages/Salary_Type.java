@@ -151,4 +151,5 @@ public class Salary_Type extends MyMethods {
     public WebElement getSearchButton() {
         return searchButton;
     }
+
 }
