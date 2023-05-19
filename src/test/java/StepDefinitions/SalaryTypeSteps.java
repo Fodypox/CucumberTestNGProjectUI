@@ -118,4 +118,5 @@ public class SalaryTypeSteps {
     public void iShouldBeAbleToSeeNoDataMessage() {
         Assert.assertTrue(st.getNoDataToDisplay().isDisplayed());
     }
+
 }

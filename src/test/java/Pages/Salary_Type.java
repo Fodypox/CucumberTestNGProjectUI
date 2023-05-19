@@ -26,6 +26,7 @@ public class Salary_Type extends MyMethods {
     @FindBy(css = ".svg-inline--fa.fa-pen-to-square")
     private WebElement editButton;
 
+
     @FindBy(css = "ms-delete-button")
     private WebElement deleteButton;
 

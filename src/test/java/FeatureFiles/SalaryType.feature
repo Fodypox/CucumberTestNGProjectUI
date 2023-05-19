@@ -7,6 +7,7 @@ Feature: Salary Type
     And Click on Login Button
     Then User should login successfully
 
+
     Scenario: Num 1 Add new Salary Type
       Given My preconditions steps are get Salary Type ander Salary
       When I add new Salary Type
