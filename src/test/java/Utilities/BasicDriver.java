@@ -18,7 +18,7 @@ public class BasicDriver {
 
     public static WebDriver getDriver() {
         if (threadDriverName.get() == null) {
-            threadDriverName.set("chrome");
+            threadDriverName.set("brave");
         }
         if (threadDriver.get() == null) {
             switch (threadDriverName.get()) {
@@ -30,6 +30,13 @@ public class BasicDriver {
                     break;
                 case "safari":
                     threadDriver.set(new SafariDriver());
+                    break;
+                case "brave":
+                    System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true"); // Chrome Driver Output Proerty leri susturdu sadece Error verirse bir sey yazacak
+                    ChromeOptions opt = new ChromeOptions();
+                    opt.addArguments("--remote-allow-origins=*");
+                    opt.setBinary("C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe");
+                    threadDriver.set(new ChromeDriver(opt));
                     break;
                 default:
                     ChromeOptions options = new ChromeOptions();
