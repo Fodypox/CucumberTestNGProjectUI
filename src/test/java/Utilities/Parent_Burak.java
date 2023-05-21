@@ -15,7 +15,7 @@ import java.time.Duration;
 
 public class Parent_Burak extends BasicDriver {
 
-    WebDriverWait wait = new WebDriverWait(BasicDriver.getDriver(), Duration.ofSeconds(3));
+    WebDriverWait wait = new WebDriverWait(BasicDriver.getDriver(), Duration.ofSeconds(5));
     JavascriptExecutor js;
     Robot r2d2;
 
@@ -29,6 +29,11 @@ public class Parent_Burak extends BasicDriver {
         js = (JavascriptExecutor) getDriver();
 
         js.executeScript("arguments[0].click();", element);
+    }
+
+    public void colorChecker(WebElement element, String RGBcodeNumber){
+        waitUntilElementToBeVisible_Tools(element);
+        org.testng.Assert.assertEquals(element.getCssValue("color"),RGBcodeNumber, "The code doesnt match");
     }
 
     public void waitUntilElementToBeVisible_Tools(WebElement element) {
@@ -56,6 +61,7 @@ public class Parent_Burak extends BasicDriver {
     public void sendKeysElement_Tools(WebElement element, String value) {
         waitUntilElementToBeVisible_Tools(element);
         scrollToElement_Tools(element);
+        element.clear();
         element.sendKeys(value);
     }
 
@@ -91,6 +97,11 @@ public class Parent_Burak extends BasicDriver {
     public void verifyElementContainsText_Tools(WebElement element, String text) {
         waitUntilElementToBeVisible_Tools(element);
         Assert.isTrue(element.getText().contains(text), "Does not contain " + "'" + text + "'");
+    }
+
+    public void verifyBtnIsDisabled_Tools(WebElement element){
+        Assert.isTrue(!element.isEnabled(),"is not true");
+        System.out.println(element.isEnabled());
     }
 
     public WebElement creatElementByXpathWithText(String text) {

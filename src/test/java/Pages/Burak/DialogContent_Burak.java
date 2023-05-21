@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.time.Duration;
-
 public class DialogContent_Burak {
 
 
@@ -33,16 +31,26 @@ public class DialogContent_Burak {
     @FindBy(css = "textarea[id*=ms-textarea]")
     private WebElement descriptionArea;
 
-    @FindBy(className = "mat-raised-button")
+    @FindBy(xpath = "//ms-save-button//button[@color='accent']")
     private WebElement saveBtn;
 
-    @FindBy(xpath = "//div[text()='Grade Excuse Type successfully created']")
-    private WebElement successMessage;
+    @FindBy(css = ".hot-toast-bar-base>div>div>dynamic-view>div")
+    private WebElement message;
 
-    @FindBy(xpath = "//div[@class='hot-toast-bar-base']//dynamic-view/div")
-    private WebElement unsuccessMessage;
+    @FindBy(css = "svg[data-icon=\"pen-to-square\"]")
+    private WebElement editBtn;
 
+    @FindBy(css = "[id*='mat-error']>mat-error")
+    private WebElement nameRedMessage;
 
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']")
+    private WebElement deleteBtn;
+
+    @FindBy(xpath = "//div[@class='ng-star-inserted']//div")
+    private WebElement checkDeleteText;
+
+    @FindBy(css = "[class='mat-focus-indicator mat-button mat-raised-button mat-button-base mat-accent']")
+    private WebElement popUpDelete;
 
     public void clickElementDialogContect(String strElement) {
         switch (strElement) {
@@ -57,6 +65,16 @@ public class DialogContent_Burak {
                 break;
             case "saveBtn":
                 myElement = saveBtn;
+                break;
+            case "editBtn":
+                myElement = editBtn;
+                break;
+            case "deleteBtn":
+                myElement = deleteBtn;
+                break;
+            case "popUpDelete":
+                myElement = popUpDelete;
+                break;
         }
         pb.clickElement_Tools(myElement);
     }
@@ -73,14 +91,33 @@ public class DialogContent_Burak {
         pb.sendKeysElement_Tools(myElement, text);
     }
 
-    public void verifyElementContainsText(String strElement, String text){
-        switch (strElement){
-            case "successMessage":
-                myElement = successMessage;
+    public void verifyElementContainsText(String strElement, String text) {
+        switch (strElement) {
+            case "message":
+                myElement = message;
                 break;
-            case "unsuccessMessage":
-                myElement = unsuccessMessage;
+            case "checkDeleteText":
+                myElement = checkDeleteText;
+                break;
         }
-        pb.verifyElementContainsText_Tools(myElement,text);
+        pb.verifyElementContainsText_Tools(myElement, text);
+    }
+
+    public void colorCheckerDB(String strElement, String RGBcode) {
+        switch (strElement) {
+            case "nameRedMessage":
+                myElement = nameRedMessage;
+                break;
+        }
+        pb.colorChecker(myElement, RGBcode);
+    }
+
+    public void verifyBtnIsDisabledDB(String strElement) {
+        switch (strElement) {
+            case "saveBtn":
+                myElement = saveBtn;
+                break;
+        }
+        pb.verifyBtnIsDisabled_Tools(myElement);
     }
 }
