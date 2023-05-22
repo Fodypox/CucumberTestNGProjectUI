@@ -23,19 +23,6 @@ public class Hooks {
             musicPlayer.start();
             isMusicPlaying = true;
         }
-
-/*        try {
-            File soundFile = new File("src/test/java/Pages/Burak/Mario.wav"); // Replace with the actual path to your sound file
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
-            Clip clip = AudioSystem.getClip();
-            clip.open(audioInputStream);
-            clip.start();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        Scanner s = new Scanner(System.in);
-        String a = s.nextLine();
-        System.out.println(a);*/
     }
 
 
