@@ -18,7 +18,7 @@ public class BasicDriver {
 
     public static WebDriver getDriver() {
         if (threadDriverName.get() == null) {
-            threadDriverName.set("brave");
+            threadDriverName.set("chrome");
         }
         if (threadDriver.get() == null) {
             switch (threadDriverName.get()) {
