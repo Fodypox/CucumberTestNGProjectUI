@@ -97,6 +97,7 @@ public class Parent_Burak extends BasicDriver {
     public void verifyElementContainsText_Tools(WebElement element, String text) {
         waitUntilElementToBeVisible_Tools(element);
         Assert.isTrue(element.getText().contains(text), "Does not contain " + "'" + text + "'");
+
     }
 
     public void verifyBtnIsDisabled_Tools(WebElement element){
