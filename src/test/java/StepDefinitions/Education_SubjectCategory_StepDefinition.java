@@ -1,10 +1,12 @@
 package StepDefinitions;
 
 import Pages.Alex_POM;
+import Pages.DialogContent;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 
 public class Education_SubjectCategory_StepDefinition {
+//    DialogContent dc = new DialogContent();
     Alex_POM sc = new Alex_POM();
 
     @And("I go to the Subject Category")
