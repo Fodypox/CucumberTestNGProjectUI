@@ -45,6 +45,9 @@ public class Education_SubjectCategory_StepDefinition {
 
     @And("Delete added Subject Category")
     public void deleteAddedSubjectCategory() {
+//        st.waitMethod(3);
+//        st.clickMethod(st.getDeleteButton());
+//        st.clickMethod(st.getDeleteInDialogWindow());
 
     }
 }
