@@ -8,7 +8,7 @@ Feature: Validate functionality of Subject Category under Education Setup
     And I go to the Subject Category
 
 
-  Scenario: Validate as an Admin User I should be able to add a new Subject Category under the Education Setup
+  Scenario: Num1 Validate as an Admin User I should be able to add a new Subject Category under the Education Setup
     Given Add new Subject Category
     When Have verify success message
     Then Find added Subject Category
@@ -16,7 +16,7 @@ Feature: Validate functionality of Subject Category under Education Setup
 
 
 
-  Scenario: (NEGATIVE Case)Validate as an Admin User I should not be able to add a new Grading Scheme under the Education Setup with a created name
+  Scenario: Num 2 (NEGATIVE Case) Validate as an Admin User I should not be able to add a new Grading Scheme under the Education Setup with a created name
     Given Add new Subject Category
     When Have verify success message
     Then Find added Subject Category
@@ -24,7 +24,7 @@ Feature: Validate functionality of Subject Category under Education Setup
 
 
 
-  Scenario: Num 2 Edit new Salary Type
+  Scenario: Num 3 Edit new Subject Category
     Given Add new Subject Category
    When find added salary type
     And I edit added salary type
