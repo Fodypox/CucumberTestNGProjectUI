@@ -54,6 +54,38 @@ public class Alex_POM extends MyMethods {
     @FindBy(xpath = "//div//mat-error[contains(text(),'required')]")
     private WebElement thisFieldRequiredText;
 
+    @FindBy(css = "input[data-placeholder='Name'")
+    private WebElement searchExistAccountByName;
+
+    @FindBy(css = "input[data-placeholder='Code'")
+    private WebElement searchExistAccountByCode;
+
+    @FindBy(xpath = "//span[text()='Search']")
+    private WebElement searchBtn;
+
+    public WebElement getSearchExistAccountByCode() {
+        return searchExistAccountByCode;
+    }
+
+    public void setSearchExistAccountByCode(WebElement searchExistAccountByCode) {
+        this.searchExistAccountByCode = searchExistAccountByCode;
+    }
+
+    public WebElement getSearchBtn() {
+        return searchBtn;
+    }
+
+    public void setSearchBtn(WebElement searchBtn) {
+        this.searchBtn = searchBtn;
+    }
+
+    public WebElement getSearchExistAccountByName() {
+        return searchExistAccountByName;
+    }
+
+    public void setSearchExistAccountByName(WebElement searchExistAccountByName) {
+        this.searchExistAccountByName = searchExistAccountByName;
+    }
 
     public WebElement getEducationBtn() {
         return educationBtn;
