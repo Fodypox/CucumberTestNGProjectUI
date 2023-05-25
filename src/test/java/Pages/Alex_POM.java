@@ -63,6 +63,8 @@ public class Alex_POM extends MyMethods {
     @FindBy(xpath = "//span[text()='Search']")
     private WebElement searchBtn;
 
+
+
     public WebElement getSearchExistAccountByCode() {
         return searchExistAccountByCode;
     }

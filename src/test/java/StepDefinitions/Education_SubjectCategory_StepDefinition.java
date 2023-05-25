@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 
 public class Education_SubjectCategory_StepDefinition {
-//    DialogContent dc = new DialogContent();
+    //    DialogContent dc = new DialogContent();
     Alex_POM sc = new Alex_POM();
 
     @And("I go to the Subject Category")
@@ -45,9 +45,16 @@ public class Education_SubjectCategory_StepDefinition {
 
     @And("Delete added Subject Category")
     public void deleteAddedSubjectCategory() {
-//        st.waitMethod(3);
-//        st.clickMethod(st.getDeleteButton());
-//        st.clickMethod(st.getDeleteInDialogWindow());
+        sc.waitMethod(3);
+        sc.clickMethod(sc.getDeleteButton());
+        sc.clickMethod(sc.getDeleteInDialogWindow());
 
+    }
+
+    @And("I edit added salary type")
+    public void iEditAddedSalaryType() {
+        sc.clickMethod(sc.getEditButton());
+        sc.sendKeysMethod(sc.getInputName(), nameOfType2);
+        sc.clickMethod(sc.getSaveButton());
     }
 }
