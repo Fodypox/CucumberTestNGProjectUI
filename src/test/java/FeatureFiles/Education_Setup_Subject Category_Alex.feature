@@ -26,7 +26,7 @@ Feature: Validate functionality of Subject Category under Education Setup
 
   Scenario: Num 3 Edit new Subject Category
     Given Add new Subject Category
-   When find added salary type
+   When Find added Subject Category
     And I edit added salary type
     Then I have verify success edited message
     And find updated salary type
