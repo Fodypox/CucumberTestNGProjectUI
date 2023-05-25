@@ -63,9 +63,28 @@ public class Alex_POM extends MyMethods {
     @FindBy(xpath = "//span[text()='Search']")
     private WebElement searchBtn;
 
+    @FindBy(css = "ms-delete-button")
+    private WebElement deleteButton;
+
+    @FindBy(xpath = "(//span[@class='mat-button-wrapper'])[19]")
+    private WebElement deleteInDialogWindow;
 
 
+    public WebElement getDeleteButton() {
+        return deleteButton;
+    }
 
+    public void setDeleteButton(WebElement deleteButton) {
+        this.deleteButton = deleteButton;
+    }
+
+    public WebElement getDeleteInDialogWindow() {
+        return deleteInDialogWindow;
+    }
+
+    public void setDeleteInDialogWindow(WebElement deleteInDialogWindow) {
+        this.deleteInDialogWindow = deleteInDialogWindow;
+    }
 
     public WebElement getSearchExistAccountByCode() {
         return searchExistAccountByCode;
