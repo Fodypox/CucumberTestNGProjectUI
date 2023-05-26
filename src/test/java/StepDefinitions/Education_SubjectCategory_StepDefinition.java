@@ -22,6 +22,8 @@ public class Education_SubjectCategory_StepDefinition {
     @Given("Add new Subject Category")
     public void addNewSubjectCategory() {
         sc.clickMethod(sc.getAddBtn());
+        sc.waitMethod(3);
+//        sc.clickMethod(sc.getInputNameBtn());
         sc.sendKeysMethod(sc.getInputNameBtn(), "Alex1");
         sc.sendKeysMethod(sc.getTypeCode(), "a12345");
         sc.clickMethod(sc.getSaveBtn());
@@ -51,10 +53,13 @@ public class Education_SubjectCategory_StepDefinition {
 
     }
 
-    @And("I edit added salary type")
-    public void iEditAddedSalaryType() {
+
+    @And("I edit Subject Category")
+    public void iEditSubjectCategory() {
         sc.clickMethod(sc.getEditButton());
-        sc.sendKeysMethod(sc.getInputName(), nameOfType2);
-        sc.clickMethod(sc.getSaveButton());
+        sc.sendKeysMethod(sc.getInputNameEdit(), "alex123");
+        sc.sendKeysMethod(sc.getInputCodeEdit(),"a123456");
+        sc.clickMethod(sc.getSaveBtn());
+
     }
 }

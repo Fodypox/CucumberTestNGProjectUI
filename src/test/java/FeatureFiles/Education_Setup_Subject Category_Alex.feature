@@ -15,7 +15,6 @@ Feature: Validate functionality of Subject Category under Education Setup
     And Delete added Subject Category
 
 
-
   Scenario: Num 2 (NEGATIVE Case) Validate as an Admin User I should not be able to add a new Grading Scheme under the Education Setup with a created name
     Given Add new Subject Category
     When Have verify success message
@@ -23,11 +22,10 @@ Feature: Validate functionality of Subject Category under Education Setup
     And Delete added Subject Category
 
 
-
   Scenario: Num 3 Edit new Subject Category
     Given Add new Subject Category
-   When Find added Subject Category
-    And I edit added salary type
-    Then I have verify success edited message
-    And find updated salary type
-    And delete updated salary type
+    When Find added Subject Category
+    And I edit Subject Category
+    Then Have verify success message
+    And Find added Subject Category
+    And Delete added Subject Category

@@ -25,10 +25,10 @@ public class Alex_POM extends MyMethods {
     @FindBy(css = "svg[data-icon='plus']")
     private WebElement addBtn;
 
-    @FindBy(css = "(input[data-placeholder='Name'])[2]")
+    @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
     private WebElement inputNameBtn;
 
-    @FindBy(xpath = "(//span[text()='Code'])[2]")
+    @FindBy(xpath = "(//input[@data-placeholder='Code'])[2]")
     private WebElement typeCode;
 
     @FindBy(xpath = "(//span[@class='mat-slide-toggle-bar'])[1]")
@@ -69,6 +69,43 @@ public class Alex_POM extends MyMethods {
     @FindBy(xpath = "(//span[@class='mat-button-wrapper'])[19]")
     private WebElement deleteInDialogWindow;
 
+    @FindBy(css = "svg[data-icon='pen-to-square']")
+    private WebElement EditButton;
+
+
+    //  (//input[@data-placeholder='Name'])[2]
+    @FindBy(xpath="(//input[@data-placeholder='Name'])[2]")
+    private WebElement InputNameEdit;
+
+
+    //  (//input[@data-placeholder='Code'])[2]
+    @FindBy(xpath="(//input[@data-placeholder='Code'])[2]")
+    private WebElement InputCodeEdit;
+
+
+    public WebElement getInputNameEdit() {
+        return InputNameEdit;
+    }
+
+    public void setInputNameEdit(WebElement inputNameEdit) {
+        InputNameEdit = inputNameEdit;
+    }
+
+    public WebElement getInputCodeEdit() {
+        return InputCodeEdit;
+    }
+
+    public void setInputCodeEdit(WebElement inputCodeEdit) {
+        InputCodeEdit = inputCodeEdit;
+    }
+
+    public WebElement getEditButton() {
+        return EditButton;
+    }
+
+    public void setEditButton(WebElement editButton) {
+        EditButton = editButton;
+    }
 
     public WebElement getDeleteButton() {
         return deleteButton;
