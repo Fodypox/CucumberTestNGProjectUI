@@ -91,7 +91,7 @@ public class Alex_POM extends MyMethods {
     }
 
     public WebElement getDataMessageDisplayed() {
-        return dataMessageDisplayed;
+        return dataMessageDisplayed;  // last locators
     }
 
 
