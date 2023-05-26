@@ -43,6 +43,55 @@ public class Yuksel_POM extends MyMethods {
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
+    @FindBy(xpath = "( //input[@formcontrolname='date'])[1]")
+    private WebElement regStartDate;
+
+    @FindBy(xpath = "//div[contains(text(),'blank')]")
+    private WebElement leftBlank;
+
+    @FindBy(css = "svg[data-icon='pen-to-square']")
+    private WebElement editButton;
+
+    @FindBy(xpath = "//div[contains(text(),'updated')]")
+    private WebElement updatedMessage;
+
+    @FindBy(css = "svg[data-icon='trash-can']")
+    private WebElement deleteButton;
+
+    @FindBy(xpath = "//span[contains(text(),'Delete')]")
+    private WebElement deleteButtoninNewPage;
+
+    @FindBy(xpath = "//div[contains(text(),'deleted')]")
+    private WebElement deletedMessage;
+
+    public WebElement getDeleteButton() {
+        return deleteButton;
+    }
+
+    public WebElement getDeleteButtoninNewPage() {
+        return deleteButtoninNewPage;
+    }
+
+    public WebElement getDeletedMessage() {
+        return deletedMessage;
+    }
+
+    public WebElement getEditButton() {
+        return editButton;
+    }
+
+    public WebElement getUpdatedMessage() {
+        return updatedMessage;
+    }
+
+    public WebElement getLeftBlank() {
+        return leftBlank;
+    }
+
+    public WebElement getRegStartDate() {
+        return regStartDate;
+    }
+
     public WebElement getSuccessMessage() {
         return successMessage;
     }
