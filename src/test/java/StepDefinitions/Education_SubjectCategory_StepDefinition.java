@@ -56,10 +56,18 @@ public class Education_SubjectCategory_StepDefinition {
 
     @And("I edit Subject Category")
     public void iEditSubjectCategory() {
+        sc.waitMethod(3);
         sc.clickMethod(sc.getEditButton());
         sc.sendKeysMethod(sc.getInputNameEdit(), "alex123");
-        sc.sendKeysMethod(sc.getInputCodeEdit(),"a123456");
+        sc.sendKeysMethod(sc.getInputCodeEdit(), "a123456");
         sc.clickMethod(sc.getSaveBtn());
+
+    }
+
+    @Then("I should to see no data message")
+    public void iShouldToSeeNoDataMessage() {
+        sc.waitMethod(3);
+        Assert.assertTrue(sc.getDataMessageDisplayed().isDisplayed());  // just displayed
 
     }
 }

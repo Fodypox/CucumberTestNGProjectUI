@@ -83,6 +83,14 @@ public class Alex_POM extends MyMethods {
     private WebElement InputCodeEdit;
 
 
+     @FindBy(xpath = "//div[text()=' There is no data to display ']")
+     private WebElement dataMessageDisplayed;
+
+
+    public WebElement getDataMessageDisplayed() {
+        return dataMessageDisplayed;
+    }
+
     public WebElement getInputNameEdit() {
         return InputNameEdit;
     }
