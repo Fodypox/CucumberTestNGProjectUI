@@ -34,5 +34,6 @@ Feature:Validate functionality of Grading Scheme under Education Setup
     And I click on the add button to create new Grading Scheme
     And I fill up the new grading scheme form with new data
     And I click on the save button
+    Then User should see the success message for adding new grading Scheme
     And i click on the delete buttons
     Then User should see the success message for deleting created grading Scheme
