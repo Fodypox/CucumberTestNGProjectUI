@@ -26,8 +26,8 @@ public class Entrance_Exams {
         yp.clickMethod(yp.getEntranceExam2());
     }
 
-    @And("Click on Add Button")
-    public void clickOnAddButton() {
+    @And("Click on Add Buttonn")
+    public void clickOnAddButtonn() {
         yp.clickMethod(yp.getAddButton());
     }
 
@@ -54,8 +54,8 @@ public class Entrance_Exams {
         yp.clickMethod(yp.getGradeLevelFirst());
     }
 
-    @And("Click on Save button")
-    public void clickOnSaveButton() {
+    @And("Click on Save buttonn")
+    public void clickOnSaveButtonn() {
         yp.clickMethod(yp.getSaveButton());
     }
 
@@ -76,8 +76,8 @@ public class Entrance_Exams {
         Assert.assertTrue(yp.getLeftBlank().isDisplayed());
     }
 
-    @And("Click on Edit Button")
-    public void clickOnEditButton() {
+    @And("Click on Edit Buttonn")
+    public void clickOnEditButtonn() {
         yp.waitUntilVisible(yp.getEditButton());
     yp.clickMethod(yp.getEditButton());
     }
@@ -95,8 +95,8 @@ public class Entrance_Exams {
         Assert.assertTrue(yp.getUpdatedMessage().isDisplayed());
     }
 
-    @And("Click on delete button")
-    public void clickOnDeleteButton() {
+    @And("Click on delete buttonn")
+    public void clickOnDeleteButtonn() {
         yp.waitUntilVisible(yp.getDeleteButton());
         yp.clickMethod(yp.getDeleteButton());
     }
