@@ -66,8 +66,9 @@ public class Salary_Type extends MyMethods {
     @FindBy(xpath = "//div[text()='The Salary Type with Name \"QA Automation Engineer in Test\" already exists.']")
     private WebElement existedMessage;
 
-    @FindBy(xpath = "(//fa-icon[@class='ng-fa-icon'])[16]")
+    @FindBy(xpath = "(//span[@class='mat-button-wrapper'])[20]")
     private WebElement closDialog;
+
 
     @FindBy(xpath = "//div[text()=' There is no data to display ']")
     private WebElement noDataToDisplay;
